@@ -41,3 +41,13 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+#ProjectSetup
+*gradle*
+.classpath
+.project
+*.metadata\*
+*logs\*
+*config\*
+*build\*
+options.txt
