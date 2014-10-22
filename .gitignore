@@ -1,6 +1,7 @@
 #ProjectSetup
 *
-!src/
-!README.md
-!LICENSE.md
-!build.gradle
+!/Libs*
+!/src*
+!/README.md
+!/LICENSE.md
+!/build.gradle
