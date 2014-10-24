@@ -20,7 +20,7 @@ public class XPeripheralMod{
 	
 	private ConfigurationManager confmgr = new ConfigurationManager();
 	
-	@SidedProxy(clientSide="dirich.ly.bit.proxy.Client", serverSide="dirich.ly.bit.proxy.Server")
+	@SidedProxy(clientSide="dirich.ly.bit.xperipheral.proxy.Client", serverSide="dirich.ly.bit.xperipheral.proxy.Server")
 	public static Server proxy;
 	
 	@EventHandler

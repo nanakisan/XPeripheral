@@ -1,16 +1,12 @@
 package dirich.ly.bit.xperipheral;
 
-import java.util.EnumSet;
-
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.Phase;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
-import net.minecraft.util.ChatStyle;
 
 public class UpdateManager {
 
-	private static transient int pollOffset = 0;
 
 	public static void registerUpdater(UpdateManager manager) {
 
