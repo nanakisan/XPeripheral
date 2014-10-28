@@ -1,0 +1,16 @@
+[
+{
+  "modid": "XPeripheral",
+  "name": "XPeripheral",
+  "description": "The 'MiscPeripheral' for 1.7+",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Mariomarco"],
+  "credits": "Dan200 for creating ComputerCraft and all those awesome Devs!",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": ["Computercraft"]
+}
+]
