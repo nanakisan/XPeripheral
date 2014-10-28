@@ -17,16 +17,16 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.10-1.0"
+version = "10.13.2.1230"
 group= "cc.cu.mariomarco.XPeripheral" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "XPeripheral"
 
 minecraft {
-    version = "1.7.10-10.13.0.1180"
+    version = "1.7.10-10.13.2.1230"
     if (file('../req').exists()){
-        assetDir = "../req/assets"
+        runDir = "../req/assets"
     } else {
-        assetDir = "assets"
+        runDir = "assets"
     }
 }
 

@@ -3,6 +3,7 @@
 .gradle
 .metadata
 bin
+eclipse
 build
 config
 gradle
@@ -11,8 +12,11 @@ logs
 mods
 resourcepacks
 saves
+.gitignore
+.gitattributes
 *.classpath
 *.project
 *gradlew*
 *options.txt
 *src\main*
+*.setting*

@@ -15,7 +15,7 @@ public class XPeripheralMod{
 	
 	public static final String modId = "XPeripheral";
 	public static final String modName = "XPeripheral";
-	public static final String version = "1.7.10-R0B0";
+	public static final String version = "1.7.10-R0B1";
 	public static final String dependencies = "";
 	
 	private ConfigurationManager confmgr = new ConfigurationManager();
