@@ -13,6 +13,7 @@ import dirich.ly.bit.xperipheral.librarys.BlockLib;
 import dirich.ly.bit.xperipheral.librarys.EntityLib;
 import dirich.ly.bit.xperipheral.librarys.ItemLib;
 import dirich.ly.bit.xperipheral.librarys.TileEntityLib;
+import dirich.ly.bit.xperipheral.proxy.Client;
 import dirich.ly.bit.xperipheral.proxy.Server;
 
 @Mod(modid = XPeripheralMod.modId, name = XPeripheralMod.modName, version = XPeripheralMod.version, dependencies = XPeripheralMod.dependencies)
@@ -35,6 +36,7 @@ public class XPeripheralMod{
 	
 	@SidedProxy(clientSide="dirich.ly.bit.xperipheral.proxy.Client", serverSide="dirich.ly.bit.xperipheral.proxy.Server")
 	public static Server proxy;
+	public Client client = new Client();
 	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent evt)
@@ -45,6 +47,7 @@ public class XPeripheralMod{
 		
 		itemLib.registerAll();
 		blockLib.registerAll();
+		tileEntityLib.registerAll(this);
 
 	}
 
