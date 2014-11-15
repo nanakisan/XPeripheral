@@ -1,5 +1,6 @@
 package dirich.ly.bit.xperipheral;
 
+import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.SidedProxy;
@@ -7,7 +8,11 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLLoadCompleteEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
-
+import dirich.ly.bit.xperipheral.librarys.ArmorLib;
+import dirich.ly.bit.xperipheral.librarys.BlockLib;
+import dirich.ly.bit.xperipheral.librarys.EntityLib;
+import dirich.ly.bit.xperipheral.librarys.ItemLib;
+import dirich.ly.bit.xperipheral.librarys.TileEntityLib;
 import dirich.ly.bit.xperipheral.proxy.Server;
 
 @Mod(modid = XPeripheralMod.modId, name = XPeripheralMod.modName, version = XPeripheralMod.version, dependencies = XPeripheralMod.dependencies)
@@ -15,8 +20,16 @@ public class XPeripheralMod{
 	
 	public static final String modId = "XPeripheral";
 	public static final String modName = "XPeripheral";
-	public static final String version = "1.7.10-R0B1";
-	public static final String dependencies = "";
+	public static final String version = "1.7.10-R0B2";
+	public static final String dependencies = ""; // "required-after:ComputerCraft@[1.63,)";
+	
+	public static final CreativeTabs tab = new XPeripheralTab();
+	
+	private ArmorLib armorLib = new ArmorLib();
+	private BlockLib blockLib = new BlockLib();
+	private EntityLib entityLib = new EntityLib();
+	private ItemLib itemLib = new ItemLib();
+	private TileEntityLib tileEntityLib = new TileEntityLib();
 	
 	private ConfigurationManager confmgr = new ConfigurationManager();
 	
@@ -29,6 +42,9 @@ public class XPeripheralMod{
 		confmgr.setConfigFolderBase(evt.getModConfigurationDirectory());
 		confmgr.loadConfig(confmgr.getCommonConfig());
 		confmgr.loadLang();
+		
+		itemLib.registerAll();
+		blockLib.registerAll();
 
 	}
 
