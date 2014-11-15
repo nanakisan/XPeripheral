@@ -18,6 +18,20 @@ public class BlockLib {
 		}
 	}
 	
+	public BlockBase getBlock(String _identifier){
+		if(Bank.containsKey(_identifier)){
+			return Bank.get(_identifier);
+		}
+		else return null;
+	}
+	
+	public void removeBlock(String _identifier){
+		if(Bank.containsKey(_identifier)){
+			Bank.remove(_identifier);
+		}
+	}
+	
+	
 	public void registerAll(){
 		new BasicBlock().register(this);
 	}

@@ -7,7 +7,6 @@ public class BasicBlock extends BlockBase{
 
 	public BasicBlock() {
 		super(Material.tnt, "BasicBlock");
-		// TODO Auto-generated constructor stub
 	}
 
 }
